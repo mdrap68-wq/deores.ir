@@ -131,12 +131,18 @@ export function TelegramIcon({ className = "h-5 w-5" }: { className?: string }) 
   );
 }
 
-/** Official Bale messenger mark (simplified brand glyph). */
+/** Official Bale messenger app icon. */
 export function BaleIcon({ className = "h-5 w-5" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" className={className} aria-hidden="true" fill="currentColor">
-      <path d="M12 2C6.48 2 2 6.26 2 11.5c0 2.9 1.4 5.48 3.6 7.24V22l3.35-1.84c.96.27 1.98.42 3.05.42 5.52 0 10-4.26 10-9.5S17.52 2 12 2zm4.86 7.38-4.5 4.24c-.18.17-.42.25-.66.25-.17 0-.34-.04-.49-.13l-2.28-1.36c-.38-.23-.25-.76.2-.84l2.78-.5c.08-.02.14-.08.16-.16l.66-2.72c.08-.34.53-.4.7-.09l3.92 1.02c.4.1.46.66.11.89z" />
-    </svg>
+    <img
+      src="/images/bale.svg"
+      alt=""
+      width={24}
+      height={24}
+      className={className}
+      aria-hidden="true"
+      draggable={false}
+    />
   );
 }
 

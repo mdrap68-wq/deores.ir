@@ -200,8 +200,8 @@ ${form.message ? `توضیحات: ${form.message}` : ""}`;
                 rel="noopener noreferrer"
                 className="group flex items-center gap-4 rounded-[4px] border border-graphite/12 bg-cream/55 px-5 py-5 transition-colors duration-300 hover:border-plum/35 hover:bg-cream"
               >
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[3px] bg-[#00A693] text-white">
-                  <BaleIcon className="h-[22px] w-[22px]" />
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[3px] bg-paper">
+                  <BaleIcon className="h-9 w-9" />
                 </span>
                 <span className="flex-1">
                   <span className="block text-[11px] tracking-[0.12em] text-graphite/50">گفت‌وگوی مستقیم</span>
