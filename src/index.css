@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Vazirmatn", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+  --font-grotesk: "Space Grotesk", ui-monospace, "SFMono-Regular", monospace;
+
+  --color-paper: #f8f7f2;
+  --color-cream: #edece7;
+  --color-titan: #dadce1;
+  --color-titan2: #c8cad1;
+  --color-graphite: #25262d;
+  --color-charcoal: #2d2f37;
+  --color-plum: #3a1c71;
+  --color-rose: #d76d77;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-paper);
+    color: var(--color-graphite);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--color-plum);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-plum);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  img {
+    -webkit-user-drag: none;
+  }
+}
+
+/* ── Engraved instrument-panel details ───────────────────────────── */
+
+.font-grotesk {
+  font-family: var(--font-grotesk);
+}
+
+/* همه اعداد با وزیر — حتی داخل بلوک‌های latin / grotesk */
+.tnum,
+.font-grotesk.tnum,
+.latin.tnum,
+.hero-num {
+  font-family: var(--font-sans);
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+/* engraved outline numeral — the index plate on a machined panel */
+.engraved {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(58, 28, 113, 0.32);
+  paint-order: stroke fill;
+}
+@media (min-width: 1024px) {
+  .engraved {
+    -webkit-text-stroke-width: 2px;
+  }
+}
+
+.latin {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+/* fine machined grain, used on metal plates */
+.grain {
+  position: relative;
+}
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.28;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+}
+
+/* brushed titanium surface */
+.brushed {
+  background-image: repeating-linear-gradient(
+      115deg,
+      rgba(255, 255, 255, 0.55) 0px,
+      rgba(255, 255, 255, 0) 2px,
+      rgba(37, 38, 45, 0.045) 3px,
+      rgba(255, 255, 255, 0) 5px
+    ),
+    linear-gradient(160deg, #e6e7ea 0%, #dadce1 42%, #c8cad1 100%);
+}
+
+/* tick-marked edge rail */
+.tick-rail {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(37, 38, 45, 0.26) 0px,
+    rgba(37, 38, 45, 0.26) 1px,
+    transparent 1px,
+    transparent 22px
+  );
+  background-size: 7px 100%;
+  background-repeat: repeat-y;
+  background-position: top right;
+}
+
+.hairgrid {
+  background-image: linear-gradient(to left, rgba(37, 38, 45, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 38, 45, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.mask-line {
+  display: block;
+  overflow: hidden;
+  padding-top: 0.04em;
+  padding-bottom: 0.18em;
+}
+.mask-line > span {
+  display: block;
+  will-change: transform;
+}
+
+.vlabel {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+/* hide scrollbar on the horizontal project strip */
+.no-bar {
+  scrollbar-width: none;
+}
+.no-bar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
