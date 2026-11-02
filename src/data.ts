@@ -86,7 +86,7 @@ export const featuredProjects: Project[] = [
     type: "وب‌سایت خدماتی و پزشکی",
     desc: "وب‌سایت معرفی کلینیک با رزرو نوبت، معرفی خدمات تخصصی، گالری و ارتباط مستقیم با پذیرش؛ تمرکز روی اعتمادسازی و تجربه کاربری موبایل.",
     meta: ["رزرو نوبت", "خدمات تخصصی", "سئو محلی"],
-    link: "https://dandan-pezeshki-website-5eocatdm2-mdrap68-4485s-projects.vercel.app/",
+    link: "https://dandan-pezeshki-website-pfr2ecvax-mdrap68-4485s-projects.vercel.app/",
     img: work01,
     year: "۱۴۰۴",
   },
