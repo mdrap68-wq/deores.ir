@@ -227,7 +227,10 @@ ${form.message ? `توضیحات: ${form.message}` : ""}`;
                 </span>
                 <span className="flex-1">
                   <span className="block text-[11px] tracking-[0.12em] text-graphite/50">تماس تلفنی</span>
-                  <span className="latin tnum mt-1 block font-grotesk text-[15px] font-bold text-graphite">
+                  <span
+                    className="mt-1 block w-fit text-[15px] font-extrabold tracking-wide text-graphite"
+                    dir="ltr"
+                  >
                     {contact.phoneDisplay}
                   </span>
                 </span>

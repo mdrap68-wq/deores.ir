@@ -12,15 +12,15 @@ import work04 from "./assets/work-04.png";
    ──────────────────────────────────────────────────────────────── */
 
 export const contact = {
-  brand: "استودیو دیجیتال",
-  brandLatin: "DIGITAL STUDIO",
+  brand: "استودیو دیورس",
+  brandLatin: "DEORES STUDIO",
   /** شماره موبایل (بین‌المللی، بدون +) — واتس‌اپ، تلگرام و بله */
-  whatsappNumber: "989365374159",
-  whatsapp: "https://wa.me/989365374159",
-  telegram: "https://t.me/+989365374159",
-  bale: "https://ble.ir/dl?phone=989365374159",
-  phone: "+989365374159",
-  phoneDisplay: "۰۹۳۶ ۵۳۷ ۴۱۵۹",
+  whatsappNumber: "989965442168",
+  whatsapp: "https://wa.me/989965442168",
+  telegram: "https://t.me/+989965442168",
+  bale: "https://ble.ir/dl?phone=989965442168",
+  phone: "+989965442168",
+  phoneDisplay: "۰۹۹۶ ۵۴۴ ۲۱۶۸",
   email: "hello@example.com",
   instagram: "#",
   linkedin: "#",

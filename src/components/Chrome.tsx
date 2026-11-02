@@ -7,7 +7,7 @@ import { contact, nav } from "../data";
 
 export function Mark({ className = "h-8 w-8" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 32 32" className={className} role="img" aria-label="استودیو دیجیتال">
+    <svg viewBox="0 0 32 32" className={className} role="img" aria-label="استودیو دیورس">
       <path
         d="M2 8.2 L8.2 2 H30 V23.8 L23.8 30 H2 Z"
         fill="none"
