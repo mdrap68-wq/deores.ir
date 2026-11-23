@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: Vazirmatn;
+  src: url("/demos/abbaspour/fonts/vazirmatn-arabic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+:root {
+  font-family: Vazirmatn, Arial, sans-serif;
+  color: #242322;
+  background: #fff;
+  font-synthesis: none;
+  --orange: #f16a2b;
+  --ink: #252423;
+  --peach: #fff3ea;
+  --gray: #f5f4f1;
+  --muted: #76746e;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 26px;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  -webkit-font-smoothing: antialiased;
+}
+button,
+a,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  color: inherit;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 3px solid #ed8c54;
+  outline-offset: 4px;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+::selection {
+  background: #ffd4b9;
+  color: #35271f;
+}
+button,
+a {
+  touch-action: manipulation;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

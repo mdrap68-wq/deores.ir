@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0a0807;
+  --color-coal: #16110e;
+  --color-paper: #f1ece1;
+  --color-cream: #e4dac4;
+  --color-sand: #cdbc9f;
+  --color-wine: #792030;
+  --color-wine-deep: #571625;
+  --color-acid: #cdf052;
+  --color-fog: #8a8172;
+  --color-clay: #6e685c;
+
+  --font-sans: "Vazirmatn", ui-sans-serif, system-ui, "Segoe UI", Tahoma, sans-serif;
+}
+
+html {
+  scroll-behavior: auto;
+  font-family: var(--font-sans);
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-acid);
+  color: var(--color-ink);
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* ---------- utilities ---------- */
+
+/* outlined ghost type */
+@utility text-ghost {
+  color: transparent;
+  -webkit-text-stroke: 1.5px color-mix(in srgb, currentColor 42%, transparent);
+}
+
+@utility text-ghost-strong {
+  color: transparent;
+  -webkit-text-stroke: 2px color-mix(in srgb, currentColor 72%, transparent);
+}
+
+/* hide scrollbars for tabs */
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* tabular persian numerals look better slightly tighter */
+@utility tabular-fa {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+/* accessible focus */
+:focus-visible {
+  outline: 2px solid var(--color-acid);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* hero ingredient checklist states */
+.check-item.is-active {
+  color: var(--color-acid);
+}
+.check-item.is-active .dot {
+  background: var(--color-acid);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--color-acid) 70%, transparent);
+  transform: scale(1.35);
+}
+.check-item.is-done {
+  color: var(--color-sand);
+}
+.check-item.is-done .dot {
+  background: var(--color-sand);
+  box-shadow: none;
+  transform: scale(1);
+}
+
+/* reduced motion: kill marquee etc. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

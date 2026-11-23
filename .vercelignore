@@ -1,0 +1,6 @@
+.qa/
+.reference/
+uploads/
+node_modules/
+dist/
+*.log
