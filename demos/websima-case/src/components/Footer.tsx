@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-6 overflow-hidden" aria-hidden>
-          <div className="select-none text-center text-[22vw] font-black leading-[0.8] tracking-tighter text-white/[0.04] md:text-[14rem]" dir="ltr">deores</div>
+          <div className="select-none text-center text-[22vw] font-black leading-[0.8] tracking-tighter text-white/[0.04] md:text-[14rem]" dir="ltr">KHAS LIFESTYLE</div>
         </div>
       </div>
       <div className="relative border-t border-white/10 py-5 text-center text-xs text-white/40">

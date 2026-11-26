@@ -76,7 +76,7 @@ export function Logo({ light = false, className }: { light?: boolean; className?
         </svg>
       </span>
       <span className="flex flex-col leading-none" dir="ltr">
-        <span className={cn("text-xl font-black tracking-tight", light ? "text-white" : "text-char")}>deores</span>
+        <span className={cn("text-xl font-black tracking-tight", light ? "text-white" : "text-char")}>KHAS LIFESTYLE</span>
         <span className={cn("mt-1 text-[9px] font-medium tracking-[0.18em]", light ? "text-white/50" : "text-char/50")}>DESIGN · DEVELOP · GROW</span>
       </span>
     </a>

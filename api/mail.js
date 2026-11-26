@@ -17,7 +17,7 @@ export async function sendConsultationMail({ name, phone, service, brief, refere
 
   const when = new Date().toLocaleString('fa-IR', { timeZone: 'Asia/Tehran' });
   const text = [
-    'درخواست مشاوره جدید از وب‌سایت دیورس',
+    'درخواست مشاوره جدید از وب‌سایت خاص لایف استایل',
     '',
     `نام: ${name}`,
     `شماره تماس: ${phone}`,
@@ -28,14 +28,14 @@ export async function sendConsultationMail({ name, phone, service, brief, refere
   ].join('\n');
 
   await transporter.sendMail({
-    from: `"دیورس — درخواست مشاوره" <${user}>`,
+    from: `"خاص لایف استایل — درخواست مشاوره" <${user}>`,
     to,
     subject: `درخواست مشاوره جدید — ${name}`,
     text,
     html: `
       <div style="font-family:Tahoma,Arial,sans-serif;line-height:1.9;color:#222;direction:rtl;text-align:right">
         <h2 style="margin:0 0 12px">درخواست مشاوره جدید</h2>
-        <p style="margin:0 0 18px;color:#666">یک نفر از وب‌سایت دیورس فرم مشاوره را پر کرده است.</p>
+        <p style="margin:0 0 18px;color:#666">یک نفر از وب‌سایت خاص لایف استایل فرم مشاوره را پر کرده است.</p>
         <table style="border-collapse:collapse;width:100%;max-width:560px">
           <tr><td style="padding:8px 0;color:#777;width:120px">نام</td><td style="padding:8px 0;font-weight:700">${escapeHtml(name)}</td></tr>
           <tr><td style="padding:8px 0;color:#777">شماره تماس</td><td style="padding:8px 0;font-weight:700;direction:ltr;text-align:right">${escapeHtml(phone)}</td></tr>

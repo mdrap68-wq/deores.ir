@@ -1,4 +1,4 @@
-# DEORES — Persian creative studio
+# KHAS LIFESTYLE — Persian creative studio
 
 A responsive Persian RTL studio landing page built with React, TypeScript, Vite, and Tailwind. The visual system combines warm white surfaces, orange accents, charcoal portfolio sections, custom studio imagery, and self-hosted Persian typography.
 
