@@ -1,6 +1,8 @@
 import { randomUUID } from 'node:crypto';
 import '../server/runtime-config.js';
 import supabase from './db-client.js';
+import { hasDatabaseConfig } from './local-fallback.js';
+import { hasMailConfig, sendConsultationMail } from './mail.js';
 
 const clean = (value, max) => typeof value === 'string' ? value.trim().slice(0, max) : '';
 const digits = (value) => value.replace(/[۰-۹]/g, n => String(n.charCodeAt(0) - 1776)).replace(/[٠-٩]/g, n => String(n.charCodeAt(0) - 1632));
@@ -15,6 +17,7 @@ export default async function handler(req, res) {
     if (req.method === 'GET') {
       const reference = clean(req.query.reference, 40);
       if (!/^[\da-f]{8}-[\da-f]{4}-[\da-f]{4}-[\da-f]{4}-[\da-f]{12}$/i.test(reference)) return res.status(400).json({ error: 'کد پیگیری معتبر نیست.' });
+      if (!hasDatabaseConfig()) return res.status(404).json({ error: 'درخواستی با این کد پیدا نشد.' });
       const { data, error } = await supabase.from('ws_consultations').select('reference, status, created_at').eq('reference', reference).setHeader('x-consultation-reference', reference).maybeSingle();
       if (error) throw error;
       if (!data) return res.status(404).json({ error: 'درخواستی با این کد پیدا نشد.' });
@@ -29,10 +32,38 @@ export default async function handler(req, res) {
       if (name.length < 2) return res.status(400).json({ error: 'نام و نام خانوادگی را وارد کنید.' });
       if (!/^09\d{9}$/.test(phone)) return res.status(400).json({ error: 'شماره همراه معتبر وارد کنید.' });
       if (!service) return res.status(400).json({ error: 'خدمت موردنظر را انتخاب کنید.' });
+
+      const canMail = hasMailConfig();
+      const canStore = hasDatabaseConfig();
+      if (!canMail && !canStore) {
+        return res.status(500).json({ error: 'ثبت درخواست فعلاً در دسترس نیست. لطفاً بعداً تلاش کنید.' });
+      }
+
       const reference = randomUUID();
-      const { data, error } = await supabase.from('ws_consultations').insert({ reference, name, phone, service, brief, status: 'received' }).select('reference, created_at, status').setHeader('x-consultation-reference', reference).single();
-      if (error) throw error;
-      return res.status(201).json(data);
+      const created_at = new Date().toISOString();
+      let stored = null;
+
+      if (canStore) {
+        try {
+          const { data, error } = await supabase.from('ws_consultations').insert({ reference, name, phone, service, brief, status: 'received' }).select('reference, created_at, status').setHeader('x-consultation-reference', reference).single();
+          if (error) throw error;
+          stored = data;
+        } catch (err) {
+          console.error('Consultation DB save failed:', err.message);
+          if (!canMail) throw err;
+        }
+      }
+
+      if (canMail) {
+        try {
+          await sendConsultationMail({ name, phone, service, brief, reference });
+        } catch (err) {
+          console.error('Consultation mail failed:', err.message);
+          if (!stored) throw err;
+        }
+      }
+
+      return res.status(201).json(stored || { reference, created_at, status: 'received' });
     }
     return res.status(405).json({ error: 'Method not allowed' });
   } catch (err) {

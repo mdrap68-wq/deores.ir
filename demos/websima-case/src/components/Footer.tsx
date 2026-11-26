@@ -18,7 +18,7 @@ export default function Footer() {
             <p className="mt-6 max-w-sm text-sm leading-8 text-white/55">
               وب‌سیما یک شریک دیجیتال برای کسب‌وکارهای ایرانی است؛ از طراحی وبسایت و فروشگاه اینترنتی تا رابط کاربری و بازاریابی دیجیتال، برای رشد برند شما.
             </p>
-            <a href="tel:02191077701" className="mt-6 inline-block text-3xl font-black text-brand" dir="ltr">021 91077701</a>
+            <a href="tel:+989965442168" className="mt-6 inline-block text-3xl font-black text-brand" dir="ltr">0996 544 2168</a>
             <div className="mt-6 flex gap-3">
               {[AtSign, Globe, MessageCircle, Mail].map((I, i) => (
                 <a key={i} href="#top" aria-label="شبکه اجتماعی" className="grid h-11 w-11 place-items-center rounded-full bg-white/10 transition hover:bg-brand">
@@ -45,7 +45,7 @@ export default function Footer() {
 
         <div className="mt-14 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-white/10 pt-8 text-sm text-white/55">
           <span className="flex items-center gap-2"><MapPin className="h-4 w-4 text-brand" /> تهران، ایران</span>
-          <span className="flex items-center gap-2" dir="ltr"><Phone className="h-4 w-4 text-brand" /> 021 91077701</span>
+          <span className="flex items-center gap-2" dir="ltr"><Phone className="h-4 w-4 text-brand" /> 0996 544 2168</span>
         </div>
 
         <div className="mt-6 overflow-hidden" aria-hidden>

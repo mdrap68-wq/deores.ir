@@ -25,8 +25,8 @@ export default function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <a href="tel:02191077701" className="hidden items-center gap-2 px-3 text-sm font-bold text-white/80 hover:text-brand md:flex" dir="ltr">
-            <Phone className="h-4 w-4 text-brand" /> 021 91077701
+          <a href="tel:+989965442168" className="hidden items-center gap-2 px-3 text-sm font-bold text-white/80 hover:text-brand md:flex" dir="ltr">
+            <Phone className="h-4 w-4 text-brand" /> 0996 544 2168
           </a>
           <Btn className="hidden !px-5 !py-2.5 sm:inline-flex">درخواست مشاوره رایگان</Btn>
           <button onClick={() => setOpen(!open)} className="grid h-10 w-10 place-items-center rounded-full bg-white/10 text-white lg:hidden" aria-label="منو">

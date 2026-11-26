@@ -58,11 +58,11 @@ export default function Faq() {
             <div className="relative overflow-hidden rounded-[3rem] bg-sand ring-8 ring-white">
               <img src={`${import.meta.env.BASE_URL}images/consultant.jpg`} alt="مشاور وب‌سیما" loading="lazy" className="aspect-[4/5] w-full object-cover" />
             </div>
-            <a href="tel:02191077701" className="absolute -bottom-8 left-1/2 flex -translate-x-1/2 items-center gap-3 whitespace-nowrap rounded-full bg-char px-6 py-4 text-white shadow-2xl transition hover:bg-brand">
+            <a href="tel:+989965442168" className="absolute -bottom-8 left-1/2 flex -translate-x-1/2 items-center gap-3 whitespace-nowrap rounded-full bg-char px-6 py-4 text-white shadow-2xl transition hover:bg-brand">
               <span className="grid h-10 w-10 place-items-center rounded-full bg-brand"><Phone className="h-5 w-5" /></span>
               <span className="text-right">
                 <span className="block text-[11px] text-white/60">مشاوره رایگان</span>
-                <span className="block text-lg font-black" dir="ltr">021 91077701</span>
+                <span className="block text-lg font-black" dir="ltr">0996 544 2168</span>
               </span>
             </a>
           </div>
