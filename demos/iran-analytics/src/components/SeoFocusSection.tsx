@@ -78,7 +78,7 @@ export const SeoFocusSection: React.FC<SeoFocusSectionProps> = ({ onOpenModal })
         <div className="lg:col-span-5 order-1 lg:order-2">
           <div className="relative rounded-3xl bg-gradient-to-br from-[#DBEAFE] via-[#E0F2FE] to-[#F0F9FF] p-5 border border-sky-200/90 shadow-xl shadow-sky-900/5 overflow-hidden group">
             <img
-              src="/images/seo-3d-illustration.png"
+              src={`${import.meta.env.BASE_URL}images/seo-3d-illustration.png`}
               alt="تحلیل سئو و رفتار کاربران ایران آنالیتیکس"
               className="w-full h-64 sm:h-72 object-cover rounded-2xl shadow-md group-hover:scale-[1.03] transition-transform duration-500"
             />

@@ -14,7 +14,7 @@
                                               "لندینگ شرکتی",
                                               "طراحی RTL"
                                           ],
-                         "image":  "/images/demo-iran-analytics.png",
+                         "image":  "/images/demo-iran-analytics.jpg",
                          "color":  "#e8eef7",
                          "sort_order":  1,
                          "websiteUrl":  "/demos/iran-analytics/"
@@ -33,7 +33,7 @@
                                               "سبد خرید",
                                               "برندینگ فست‌فود"
                                           ],
-                         "image":  "/images/demo-fast-food.jpg",
+                         "image":  "/images/demo-bite-site.jpg",
                          "color":  "#1a1210",
                          "sort_order":  2,
                          "websiteUrl":  "/demos/fast-food-website/"
@@ -52,7 +52,7 @@
                                               "سبد خرید",
                                               "UI تعاملی"
                                           ],
-                         "image":  "/images/demo-kalachi.webp",
+                         "image":  "/images/demo-kalachi.jpg",
                          "color":  "#f3ebe3",
                          "sort_order":  3,
                          "websiteUrl":  "/demos/kalachi/"
@@ -71,7 +71,7 @@
                                               "کاتالوگ محصول",
                                               "لندینگ RTL"
                                           ],
-                         "image":  "/images/demo-abbaspour.webp",
+                         "image":  "/images/demo-abbaspour.jpg",
                          "color":  "#f6ebe4",
                          "sort_order":  4,
                          "websiteUrl":  "/demos/abbaspour/"

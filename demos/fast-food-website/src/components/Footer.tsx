@@ -105,14 +105,16 @@ export default function Footer() {
             className="mb-4 flex items-center gap-2 text-sm font-bold text-paper transition-colors hover:text-acid"
           >
             <Phone className="h-4 w-4" aria-hidden />
-            <span className="tabular-fa">۰۲۱ ۲۲۶۷ ۸۹۰۱</span>
+            <span className="tabular-fa" dir="ltr">
+              ۰۲۱ ۲۲۶۷ ۸۹۰۱
+            </span>
           </a>
           <p className="flex items-start gap-2 text-sm leading-7 text-sand">
             <Clock className="mt-1.5 h-4 w-4 shrink-0" aria-hidden />
-            <span className="tabular-fa">
-              شنبه تا چهارشنبه ۱۱:۰۰ تا ۲۳:۰۰
+            <span>
+              شنبه تا چهارشنبه <span className="tabular-fa" dir="ltr">۱۱:۰۰ تا ۲۳:۰۰</span>
               <br />
-              پنجشنبه و جمعه ۱۲:۰۰ تا ۲۴:۰۰
+              پنجشنبه و جمعه <span className="tabular-fa" dir="ltr">۱۲:۰۰ تا ۲۴:۰۰</span>
             </span>
           </p>
         </div>

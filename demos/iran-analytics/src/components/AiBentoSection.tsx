@@ -94,7 +94,7 @@ export const AiBentoSection: React.FC<AiBentoSectionProps> = ({ onOpenModal }) =
           <div className="relative z-10 w-40 sm:w-44 h-44 sm:h-48 shrink-0 flex items-center justify-center">
             <div className="absolute inset-0 bg-gradient-to-t from-sky-400/30 to-transparent rounded-2xl blur-xl group-hover:scale-105 transition-transform" />
             <img
-              src="/images/ira-robot.png"
+              src={`${import.meta.env.BASE_URL}images/ira-robot.png`}
               alt="دستیار هوش مصنوعی ایران آنالیتیکس IRA"
               className="w-full h-full object-contain rounded-2xl drop-shadow-[0_14px_24px_rgba(0,0,0,0.35)] group-hover:scale-105 transition-transform duration-500"
             />

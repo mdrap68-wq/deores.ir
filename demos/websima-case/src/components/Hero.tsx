@@ -54,7 +54,7 @@ export default function Hero() {
           <div className="absolute -right-6 -top-6 h-40 w-40 rounded-full bg-brand md:-right-10 md:h-56 md:w-56" />
           <div className="absolute -bottom-6 -left-4 h-32 w-32 rounded-[2.5rem] bg-char md:h-44 md:w-44" />
           <div className="relative overflow-hidden rounded-[3rem] bg-sand-2 shadow-2xl shadow-black/15 ring-8 ring-white">
-            <img src="images/hero.jpg" alt="نمونه طراحی وبسایت روی مانیتور" className="aspect-[4/4.3] w-full object-cover" />
+            <img src={`${import.meta.env.BASE_URL}images/hero.jpg`} alt="نمونه طراحی وبسایت روی مانیتور" className="aspect-[4/4.3] w-full object-cover" />
           </div>
           <div className="absolute -left-3 top-10 animate-float rounded-2xl bg-white p-4 shadow-xl md:-left-10">
             <div className="flex items-center gap-3">

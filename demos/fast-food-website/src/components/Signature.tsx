@@ -109,7 +109,7 @@ export default function Signature() {
             <div className="absolute left-1/2 top-1/2 h-[64%] w-[64%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-paper/15" aria-hidden />
             <div className="sig-img absolute inset-0 mix-blend-screen will-change-transform" data-reveal-img>
               <img
-                src="/images/burger-assembled.jpg"
+                src={`${import.meta.env.BASE_URL}images/burger-assembled.jpg`}
                 alt="مستر بایت — دبل چیزبرگر سیگنچر با سس مخصوص"
                 loading="lazy"
                 className="h-full w-full scale-110 object-contain sm:scale-125"

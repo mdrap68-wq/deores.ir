@@ -26,13 +26,13 @@ export interface MenuItem {
 }
 
 export const IMG = {
-  burger: "/images/menu-burger.jpg",
-  cheese: "/images/burger-assembled.jpg",
-  chicken: "/images/menu-chicken.jpg",
-  pizza: "/images/menu-pizza.jpg",
-  fries: "/images/menu-fries.jpg",
-  sandwich: "/images/menu-sandwich.jpg",
-  drink: "/images/menu-drink.jpg",
+  burger: `${import.meta.env.BASE_URL}images/menu-burger.jpg`,
+  cheese: `${import.meta.env.BASE_URL}images/burger-assembled.jpg`,
+  chicken: `${import.meta.env.BASE_URL}images/menu-chicken.jpg`,
+  pizza: `${import.meta.env.BASE_URL}images/menu-pizza.jpg`,
+  fries: `${import.meta.env.BASE_URL}images/menu-fries.jpg`,
+  sandwich: `${import.meta.env.BASE_URL}images/menu-sandwich.jpg`,
+  drink: `${import.meta.env.BASE_URL}images/menu-drink.jpg`,
 } as const;
 
 export const CATEGORIES: Category[] = [

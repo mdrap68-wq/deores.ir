@@ -17,9 +17,9 @@ export const Footer: React.FC = () => {
             </p>
 
             <div className="space-y-2.5 pt-2 text-xs text-slate-700">
-              <div className="flex items-center justify-end gap-2.5 font-bold" dir="ltr">
+              <div className="flex items-center justify-end gap-2.5 font-bold">
+                <span className="tabular-nums" dir="ltr">۰۲۱ - ۲۲۴۴۴۲۶۱</span>
                 <Phone className="w-4 h-4 text-slate-400 shrink-0" />
-                <span>۰۲۱ - ۲۲۴۴۴۲۶۱</span>
               </div>
 
               <div className="flex items-center justify-end gap-2.5 font-mono text-slate-600" dir="ltr">

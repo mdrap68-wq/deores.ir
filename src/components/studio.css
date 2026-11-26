@@ -100,3 +100,72 @@ html,body{overflow-x:clip;max-width:100%}
   .contact-banner h2{font-size:24px}
   .consultation-direct{flex-direction:column;align-items:flex-start}
 }
+
+/* layered work-wave motion + mobile seam fix */
+.work-section{
+  isolation:isolate;
+}
+.work-section::before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:-1px;
+  height:6px;
+  background:#22231f;
+  z-index:0;
+  pointer-events:none;
+}
+.work-wave{
+  display:block;
+  overflow:hidden;
+  top:-28px;
+  height:34px;
+  /* overlap into the dark section so no hairline shows under the frame */
+  margin-bottom:-6px;
+  z-index:1;
+}
+.work-wave .wave-layer{
+  transform-box:view-box;
+  transform-origin:center;
+  will-change:transform;
+}
+.work-wave .wave-layer-gray{
+  animation:wave-drift-a 7.2s ease-in-out infinite;
+}
+.work-wave .wave-layer-orange{
+  animation:wave-drift-b 5.4s ease-in-out infinite;
+}
+.work-wave .wave-layer-ink{
+  animation:wave-drift-c 8.6s ease-in-out infinite;
+}
+@keyframes wave-drift-a{
+  0%,100%{transform:translate3d(0,0,0) scaleX(1.06)}
+  35%{transform:translate3d(14px,-1.5px,0) scaleX(1.06)}
+  70%{transform:translate3d(-10px,1px,0) scaleX(1.06)}
+}
+@keyframes wave-drift-b{
+  0%,100%{transform:translate3d(0,0,0) scaleX(1.08)}
+  40%{transform:translate3d(-16px,1.5px,0) scaleX(1.08)}
+  75%{transform:translate3d(11px,-1px,0) scaleX(1.08)}
+}
+@keyframes wave-drift-c{
+  0%,100%{transform:translate3d(0,0,0) scaleX(1.05)}
+  45%{transform:translate3d(9px,1px,0) scaleX(1.05)}
+  80%{transform:translate3d(-12px,-1.5px,0) scaleX(1.05)}
+}
+@media(max-width:600px){
+  .work-wave{
+    top:-24px;
+    height:30px;
+    margin-bottom:-7px;
+  }
+  .work-section::before{
+    height:8px;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .work-wave .wave-layer{
+    animation:none !important;
+  }
+}

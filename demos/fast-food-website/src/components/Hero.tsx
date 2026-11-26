@@ -4,7 +4,7 @@ import { scrollToId } from "../lib/scroll";
 import { ChevronDown } from "lucide-react";
 import { faDigits } from "../lib/format";
 
-const EXPLODED = "/images/burger-exploded.webp";
+const EXPLODED = `${import.meta.env.BASE_URL}images/burger-exploded.webp`;
 
 /**
  * Clip bands of the exploded photo. `target` = assembled center (%).
@@ -350,7 +350,10 @@ export default function Hero() {
 
       {/* checklist: left of centered burger */}
       <div className="hero-checklist absolute left-[2.5%] top-[40%] z-20 flex -translate-y-1/2 flex-col items-start gap-1 sm:left-[4%] lg:left-[3%] lg:top-1/2 lg:gap-3">
-        <span className="check-counter tabular-fa mb-0.5 text-[10px] font-bold tracking-[0.2em] text-fog lg:mb-2 lg:text-[11px]">
+        <span
+          className="check-counter tabular-fa mb-0.5 text-[10px] font-bold tracking-[0.2em] text-fog lg:mb-2 lg:text-[11px]"
+          dir="ltr"
+        >
           ۰۰ / ۰۷
         </span>
         <ul className="flex flex-col items-start space-y-1.5 lg:space-y-3">

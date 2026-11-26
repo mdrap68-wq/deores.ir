@@ -132,13 +132,17 @@ export default function Locations() {
                 </div>
                 <span className={`mb-4 block text-[13px] leading-6 ${active === i ? "text-sand" : "text-clay"}`}>{b.address}</span>
                 <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-semibold">
-                  <span className={`flex items-center gap-1.5 tabular-fa ${active === i ? "text-paper" : "text-ink"}`}>
+                  <span className={`flex items-center gap-1.5 ${active === i ? "text-paper" : "text-ink"}`}>
                     <Phone className="h-3.5 w-3.5" aria-hidden />
-                    {b.phone}
+                    <span className="tabular-fa" dir="ltr">
+                      {b.phone}
+                    </span>
                   </span>
-                  <span className={`flex items-center gap-1.5 tabular-fa ${active === i ? "text-paper" : "text-ink"}`}>
+                  <span className={`flex items-center gap-1.5 ${active === i ? "text-paper" : "text-ink"}`}>
                     <Clock className="h-3.5 w-3.5" aria-hidden />
-                    {b.hours}
+                    <span className="tabular-fa" dir="ltr">
+                      {b.hours}
+                    </span>
                   </span>
                 </div>
                 <span className={`mt-3 block border-t pt-3 text-[11px] leading-6 ${active === i ? "border-paper/15 text-fog" : "border-ink/10 text-clay"}`}>

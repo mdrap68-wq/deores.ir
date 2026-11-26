@@ -176,7 +176,7 @@ export const InteractiveModals: React.FC<InteractiveModalsProps> = ({ activeModa
             <div className="space-y-5">
               <div className="rounded-2xl bg-gradient-to-l from-[#0A4D9B] to-[#0E74D2] text-white p-4 flex items-center gap-4">
                 <img
-                  src="/images/ira-robot.png"
+                  src={`${import.meta.env.BASE_URL}images/ira-robot.png`}
                   alt="IRA AI"
                   className="w-16 h-16 rounded-2xl object-cover border border-white/30 shrink-0"
                 />

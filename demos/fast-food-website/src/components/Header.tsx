@@ -166,7 +166,7 @@ export default function Header() {
         <p className="m-link mt-auto pb-[max(2.5rem,env(safe-area-inset-bottom))] text-xs leading-6 text-fog">
           تهران — سعادت‌آباد / یوسف‌آباد / صادقیه
           <br />
-          هر روز ۱۱:۰۰ تا ۲۳:۰۰
+          هر روز <span className="tabular-fa" dir="ltr">۱۱:۰۰ تا ۲۳:۰۰</span>
         </p>
       </div>
     </>

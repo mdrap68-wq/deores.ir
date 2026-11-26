@@ -22,7 +22,7 @@ export const WordPressBannerSection: React.FC<WordPressBannerSectionProps> = ({ 
             <div className="relative w-56 sm:w-64 h-56 sm:h-64 flex items-center justify-center group">
               <div className="absolute inset-2 bg-gradient-to-tr from-[#0E74D2]/20 to-[#F59E0B]/20 rounded-3xl blur-xl group-hover:scale-105 transition-transform" />
               <img
-                src="/images/wp-plugin-box.png"
+                src={`${import.meta.env.BASE_URL}images/wp-plugin-box.png`}
                 alt="افزونه وردپرس ایران آنالیتیکس IRA"
                 className="relative z-10 w-full h-full object-contain rounded-2xl drop-shadow-xl group-hover:scale-105 transition-transform duration-500"
               />
