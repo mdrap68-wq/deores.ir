@@ -282,7 +282,7 @@ export const KeyFeaturesSection: React.FC = () => {
                 {/* Main Analytics Canvas (9 cols) */}
                 <div className="col-span-8 sm:col-span-9 p-4 flex flex-col justify-between bg-white">
                   {/* Top 5 KPI Strip */}
-                  <div className="grid grid-cols-5 gap-2 border-b border-slate-100 pb-3 text-center">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2 border-b border-slate-100 pb-3 text-center">
                     <div className="bg-slate-50/80 rounded-xl p-2">
                       <div className="text-[10px] text-slate-400">بازدیدکننده</div>
                       <div className="text-xs sm:text-sm font-black text-slate-800 mt-0.5">

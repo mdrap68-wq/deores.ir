@@ -315,8 +315,8 @@ export default function Hero() {
       </p>
 
       {/* burger stage — centered above end CTA on mobile; website right column on lg+ */}
-      <div className="absolute inset-0 z-10 flex items-center justify-center pt-[1svh] pb-[30svh] sm:pb-[28svh] lg:justify-start lg:px-0 lg:pb-0 lg:pr-[26%] lg:pt-0">
-        <div ref={stageRef} className="relative h-[min(50svh,380px)] w-auto min-[390px]:h-[min(52svh,400px)] md:h-[72svh] md:max-h-none lg:h-[82svh] will-change-transform">
+      <div className="absolute inset-0 z-10 flex items-start justify-center pt-[11svh] pb-[38svh] sm:items-center sm:pt-[1svh] sm:pb-[28svh] lg:justify-start lg:px-0 lg:pb-0 lg:pr-[26%] lg:pt-0">
+        <div ref={stageRef} className="relative h-[min(42svh,300px)] w-auto min-[390px]:h-[min(44svh,320px)] sm:h-[min(50svh,380px)] md:h-[72svh] md:max-h-none lg:h-[82svh] will-change-transform">
           <img
             src={EXPLODED}
             alt=""
@@ -348,19 +348,19 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* checklist: left of centered burger */}
-      <div className="hero-checklist absolute left-[2.5%] top-[40%] z-20 flex -translate-y-1/2 flex-col items-start gap-1 sm:left-[4%] lg:left-[3%] lg:top-1/2 lg:gap-3">
+      {/* checklist: left of centered burger — compact on mobile */}
+      <div className="hero-checklist absolute left-[2%] top-[28%] z-20 flex max-w-[42%] -translate-y-0 flex-col items-start gap-0.5 sm:left-[4%] sm:top-[40%] sm:max-w-none sm:-translate-y-1/2 lg:left-[3%] lg:top-1/2 lg:gap-3">
         <span
-          className="check-counter tabular-fa mb-0.5 text-[10px] font-bold tracking-[0.2em] text-fog lg:mb-2 lg:text-[11px]"
+          className="check-counter tabular-fa mb-0.5 text-[9px] font-bold tracking-[0.2em] text-fog sm:text-[10px] lg:mb-2 lg:text-[11px]"
           dir="ltr"
         >
           ۰۰ / ۰۷
         </span>
-        <ul className="flex flex-col items-start space-y-1.5 lg:space-y-3">
+        <ul className="flex flex-col items-start space-y-1 sm:space-y-1.5 lg:space-y-3">
           {LAYERS.map((l) => (
             <li
               key={l.name}
-              className="check-item flex items-center gap-1.5 text-[10px] font-semibold text-fog transition-colors duration-300 lg:gap-2.5 lg:text-[11px]"
+              className="check-item flex items-center gap-1 text-[9px] font-semibold leading-tight text-fog transition-colors duration-300 sm:gap-1.5 sm:text-[10px] lg:gap-2.5 lg:text-[11px]"
             >
               <i className="dot block h-1.5 w-1.5 shrink-0 rounded-full bg-fog/40 transition-all duration-300" />
               {l.name}
@@ -370,33 +370,33 @@ export default function Hero() {
       </div>
 
       {/* scroll hint */}
-      <div className="hero-hint absolute bottom-[max(0.85rem,env(safe-area-inset-bottom))] left-1/2 z-20 -translate-x-1/2 text-center md:bottom-[5.5%]">
-        <p className="mb-1 whitespace-nowrap text-[10px] font-semibold tracking-wide text-sand sm:text-[11px] md:mb-2 md:text-sm">
+      <div className="hero-hint absolute bottom-[max(0.85rem,env(safe-area-inset-bottom))] left-1/2 z-20 -translate-x-1/2 px-3 text-center md:bottom-[5.5%]">
+        <p className="mb-1 text-[10px] font-semibold tracking-wide text-sand sm:whitespace-nowrap sm:text-[11px] md:mb-2 md:text-sm">
           برای ساختن برگر اسکرول کن
         </p>
         <ChevronDown className="mx-auto h-3.5 w-3.5 animate-bounce text-acid sm:h-4 sm:w-4" aria-hidden />
       </div>
 
-      {/* end CTAs — directly under burger on mobile; left column on lg+ */}
-      <div className="hero-end absolute inset-x-5 top-[60%] z-30 mx-auto max-w-[20rem] text-center sm:inset-x-10 lg:inset-x-auto lg:top-1/2 lg:left-[3%] lg:mx-0 lg:max-w-none lg:w-[min(36vw,320px)] lg:-translate-y-1/2 lg:text-start">
+      {/* end CTAs — under burger on mobile; left column on lg+ */}
+      <div className="hero-end absolute inset-x-4 bottom-[max(4.25rem,calc(env(safe-area-inset-bottom)+3.25rem))] z-30 mx-auto max-w-[20rem] text-center sm:inset-x-10 sm:bottom-[max(5rem,calc(env(safe-area-inset-bottom)+4rem))] lg:inset-x-auto lg:top-1/2 lg:bottom-auto lg:left-[3%] lg:mx-0 lg:max-w-none lg:w-[min(36vw,320px)] lg:-translate-y-1/2 lg:text-start">
         <p className="mb-1 text-[9px] font-bold tracking-[0.28em] text-acid sm:text-[10px] lg:mb-3 lg:text-[11px]">سیگنچر آماده‌ست</p>
-        <h2 className="mb-2 text-[1.25rem] font-black leading-snug text-paper sm:text-xl lg:mb-4 lg:text-4xl xl:text-5xl">
+        <h1 className="mb-2 text-[1.25rem] font-black leading-snug text-paper sm:text-xl lg:mb-4 lg:text-4xl xl:text-5xl">
           مستر بایت، به وقت ایران
-        </h2>
+        </h1>
         <p className="mb-3 hidden text-[11px] leading-5 text-sand sm:mb-3.5 sm:block lg:mb-6 lg:max-w-xs lg:text-sm lg:leading-7">
           برگرهای دست‌ساز، مواد تازه و طعم‌هایی که قرار نیست فراموششون کنی.
         </p>
         <div className="flex flex-row items-center justify-center gap-2 lg:flex-col lg:items-stretch xl:flex-row xl:justify-start">
           <button
             onClick={() => scrollToId("menu")}
-            className="group relative flex-1 overflow-hidden rounded-full bg-acid px-4 py-3 text-[13px] font-extrabold text-ink transition-transform duration-300 hover:scale-[1.03] active:scale-95 sm:flex-none sm:px-5 lg:w-full lg:px-7 lg:text-sm xl:w-auto"
+            className="group relative flex-1 overflow-hidden rounded-full bg-acid px-4 py-3.5 text-[13px] font-extrabold text-ink transition-transform duration-300 hover:scale-[1.03] active:scale-95 sm:flex-none sm:px-5 lg:w-full lg:px-7 lg:py-3 lg:text-sm xl:w-auto"
           >
             <span className="relative z-10">سفارش آنلاین</span>
             <span className="absolute inset-0 -translate-x-full bg-paper transition-transform duration-500 ease-out group-hover:translate-x-0" />
           </button>
           <button
             onClick={() => scrollToId("menu")}
-            className="flex-1 rounded-full border border-paper/25 px-4 py-3 text-[13px] font-bold text-paper transition-colors duration-300 hover:border-acid hover:text-acid sm:flex-none sm:px-5 lg:w-full lg:px-7 lg:text-sm xl:w-auto"
+            className="flex-1 rounded-full border border-paper/25 px-4 py-3.5 text-[13px] font-bold text-paper transition-colors duration-300 hover:border-acid hover:text-acid sm:flex-none sm:px-5 lg:w-full lg:px-7 lg:py-3 lg:text-sm xl:w-auto"
           >
             منوی کامل
           </button>

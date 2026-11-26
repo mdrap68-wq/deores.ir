@@ -73,12 +73,13 @@ export function App() {
       {/* Floating IRA AI Assistant Quick-Launch Pill */}
       <button
         onClick={() => setActiveModal('ai-demo')}
-        className="fixed bottom-5 left-5 z-40 inline-flex items-center gap-2.5 bg-[#0F172A] hover:bg-[#1E293B] text-white text-xs font-black px-4 py-3 rounded-2xl shadow-xl shadow-slate-950/25 border border-amber-400/40 hover:scale-105 transition-all cursor-pointer group"
+        aria-label="دستیار هوشمند — پرسش از IRA AI"
+        className="fixed bottom-[max(1rem,env(safe-area-inset-bottom))] left-4 z-40 inline-flex items-center gap-2.5 bg-[#0F172A] hover:bg-[#1E293B] text-white text-xs font-black p-3 sm:px-4 sm:py-3 rounded-2xl shadow-xl shadow-slate-950/25 border border-amber-400/40 hover:scale-105 transition-all cursor-pointer group"
       >
-        <span className="w-7 h-7 rounded-xl bg-[#F59E0B] text-slate-950 flex items-center justify-center shadow-sm">
+        <span className="w-7 h-7 rounded-xl bg-[#F59E0B] text-slate-950 flex items-center justify-center shadow-sm shrink-0">
           <Sparkles className="w-4 h-4" />
         </span>
-        <div className="text-right">
+        <div className="hidden sm:block text-right">
           <div className="text-amber-300 text-[10px] font-bold">دستیار هوشمند</div>
           <div>پرسش از IRA AI</div>
         </div>

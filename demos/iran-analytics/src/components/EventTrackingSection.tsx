@@ -336,7 +336,7 @@ export const EventTrackingSection: React.FC = () => {
 
       {/* 8-Tab Horizontal Selector Bar (Matching Reference) */}
       <div className="bg-slate-100/90 border border-slate-200/80 rounded-2xl p-2 mb-8 overflow-x-auto">
-        <div className="grid grid-cols-4 sm:grid-cols-8 gap-2 min-w-[640px]">
+        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-2">
           {EVENT_CATEGORIES.map((tab) => {
             const isSelected = tab.id === activeTab;
             return (
@@ -456,7 +456,7 @@ export const EventTrackingSection: React.FC = () => {
 
               <div className="p-5 space-y-5">
                 {/* 5 KPI Summary Strip (Matching Reference Screenshot) */}
-                <div className="grid grid-cols-5 gap-2.5 text-center">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2.5 text-center">
                   <div className="bg-slate-50 rounded-xl p-2.5 border border-slate-100">
                     <div className="text-[10px] text-slate-400">کل رویدادها</div>
                     <div className="text-xs sm:text-sm font-black text-slate-900 mt-1">

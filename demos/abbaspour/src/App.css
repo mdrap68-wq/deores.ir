@@ -2425,12 +2425,15 @@
   .nav-actions {
     gap: 7px;
   }
+  .agency-button {
+    display: none;
+  }
   .mobile-nav {
     display: flex;
     position: absolute;
     top: 100%;
-    left: 18px;
-    right: 18px;
+    left: 12px;
+    right: 12px;
     border: 1px solid #e5ddd1;
     flex-direction: column;
     padding: 12px 18px;
@@ -2456,8 +2459,8 @@
     padding-top: 1px;
   }
   .hero {
-    height: 600px;
-    max-width: 590px;
+    height: 540px;
+    max-width: 100%;
     margin: auto;
     isolation: isolate;
   }
@@ -2493,14 +2496,14 @@
     padding: 4px 10px;
   }
   .hero h1 {
-    font-size: 43px;
-    letter-spacing: -2px;
+    font-size: clamp(26px, 7.2vw, 34px);
+    letter-spacing: -1.2px;
     line-height: 1.35;
-    margin: 12px 0 0;
+    margin: 10px 0 0;
   }
   .hero h1 > span {
-    font-size: 0.84em;
-    letter-spacing: -1.8px;
+    font-size: 0.88em;
+    letter-spacing: -1px;
   }
   .hero h1 em svg {
     bottom: -1px;
@@ -2562,28 +2565,35 @@
     border-radius: 19px;
   }
   .variety-art {
-    right: 7%;
-    width: 27%;
+    right: 4%;
+    width: 32%;
+    max-width: 120px;
+    overflow: visible;
+  }
+  .variety-art img {
+    max-width: 100%;
+    height: auto;
   }
   .variety-copy {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
-    gap: 14px;
+    gap: 10px;
     right: auto;
-    left: 7%;
+    left: 5%;
     top: 52%;
+    max-width: 58%;
   }
   .variety-copy .script-text {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.1;
-    max-width: 55px;
+    max-width: 48px;
   }
   .variety-copy strong {
-    font-size: 29px;
+    font-size: 22px;
   }
   .variety-copy b {
-    font-size: 12px;
+    font-size: 11px;
   }
   .variety-copy > div {
     gap: 7px;
@@ -2593,24 +2603,33 @@
   }
   .circle-stamp {
     left: auto;
-    right: 5%;
-    bottom: 91px;
+    right: 4%;
+    bottom: 78px;
     transform: none;
-    width: 66px;
-    height: 66px;
+    width: 56px;
+    height: 56px;
     border: 0;
     background: #fff5e5;
+    z-index: 2;
   }
   .circle-stamp:hover {
     transform: rotate(-9deg);
   }
   .overview {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
+    grid-template-columns: 1fr;
+    gap: 10px;
     margin-top: 18px;
   }
   .overview > div {
-    height: 96px;
+    height: auto;
+    min-height: 88px;
+  }
+  .stat-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 14px 16px;
+    position: relative;
   }
   .overview > .overview-brand {
     grid-column: 1/-1;
@@ -2633,11 +2652,6 @@
   .stats-spark,
   .brand-rings {
     display: none;
-  }
-  .stat-card {
-    gap: 4px;
-    flex-direction: column;
-    position: relative;
   }
   .stat-icon {
     width: 25px;
@@ -3125,24 +3139,15 @@
   .nav-actions {
     gap: 5px;
   }
-  .agency-button {
-    font-size: 9px;
-    padding: 6px 10px;
-    gap: 4px;
-    min-height: 32px;
-  }
-  .agency-button svg {
-    width: 13px;
-  }
   .nav-actions .round-button {
     width: 31px;
     height: 31px;
   }
   .hero {
-    height: 564px;
+    height: 520px;
   }
   .hero h1 {
-    font-size: 38px;
+    font-size: clamp(24px, 6.8vw, 30px);
   }
   .hero-copy {
     top: 23px;

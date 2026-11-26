@@ -258,7 +258,7 @@ export function Hero() {
       <div className="hero-image-wrap">
         <img
           className="hero-person"
-          src={image("hero-woman")}
+          src={image("hero-woman-v6")}
           alt="لحظه‌ای شیرین با ویفر کاکائویی سی‌سی‌کام آدرین"
           fetchPriority="high"
         />

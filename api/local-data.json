@@ -14,7 +14,7 @@
                                               "لندینگ شرکتی",
                                               "طراحی RTL"
                                           ],
-                         "image":  "/images/demo-iran-analytics.jpg",
+                         "image":  "/images/demo-iran-analytics.jpg?v=font2",
                          "color":  "#e8eef7",
                          "sort_order":  1,
                          "websiteUrl":  "/demos/iran-analytics/"
@@ -227,7 +227,7 @@
                           "english":  "CORPORATE WEB",
                           "summary":  "هویت دیجیتال برند شما در وب",
                           "detail":  "از استراتژی محتوا تا طراحی رابط کاربری، سایت شرکتی‌ای می‌سازیم که اعتبار برند را منتقل کند و مسیر ارتباط با مشتری را کوتاه کند.",
-                          "media":  "/images/service-corporate.webp",
+                          "media":  "/images/service-corporate.webp?v=fa1",
                           "sort_order":  1
                       },
                       {

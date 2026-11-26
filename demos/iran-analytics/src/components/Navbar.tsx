@@ -6,12 +6,12 @@ interface NavbarProps {
 }
 
 export const IraLogo: React.FC<{ className?: string }> = ({ className = '' }) => (
-  <a href="#" className={`inline-flex items-center gap-2.5 group select-none ${className}`}>
-    <span className="text-xl md:text-2xl font-black tracking-tight text-[#0E74D2] group-hover:text-[#0B4F9F] transition-colors">
+  <a href="#" className={`inline-flex items-center gap-1.5 sm:gap-2.5 group select-none min-w-0 ${className}`}>
+    <span className="text-[15px] sm:text-xl md:text-2xl font-black tracking-tight text-[#0E74D2] group-hover:text-[#0B4F9F] transition-colors truncate">
       ایران آنالیتیکس
     </span>
-    <div className="relative flex items-center justify-center bg-gradient-to-br from-[#F8FAFC] to-[#EFF6FF] border border-[#E2E8F0] rounded-xl px-2.5 py-1 shadow-xs">
-      <svg width="46" height="26" viewBox="0 0 56 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <div className="relative flex items-center justify-center bg-gradient-to-br from-[#F8FAFC] to-[#EFF6FF] border border-[#E2E8F0] rounded-xl px-1.5 sm:px-2.5 py-1 shadow-xs shrink-0">
+      <svg className="w-9 h-5 sm:w-[46px] sm:h-[26px]" width="46" height="26" viewBox="0 0 56 30" fill="none" xmlns="http://www.w3.org/2000/svg">
         {/* Stylized I */}
         <rect x="2" y="6" width="7" height="20" rx="3.5" fill="#0E74D2" />
         <circle cx="5.5" cy="2.5" r="2.5" fill="#F59E0B" />
@@ -58,12 +58,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenModal }) => {
   return (
     <header className="sticky top-0 z-50 w-full">
       {/* Subtle Browser Chrome Top Bar */}
-      <div className="bg-[#0F172A] text-slate-300 text-xs py-1.5 px-4 border-b border-slate-800">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <span className="inline-flex items-center gap-1.5 text-emerald-400 font-medium">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              سرورهای پردازش ابری ایران: فعال (۴.۲ms)
+      <div className="bg-[#0F172A] text-slate-300 text-xs py-1.5 px-3 sm:px-4 border-b border-slate-800">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
+          <div className="flex items-center gap-3 min-w-0">
+            <span className="inline-flex items-center gap-1.5 text-emerald-400 font-medium truncate">
+              <span className="w-2 h-2 shrink-0 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="truncate">سرورهای ابری: فعال</span>
+              <span className="hidden sm:inline">(۴.۲ms)</span>
             </span>
             <span className="hidden sm:inline text-slate-600">|</span>
             <button
@@ -97,7 +98,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenModal }) => {
             : 'bg-white/75 backdrop-blur-md border-b border-slate-100 py-4'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between gap-2 sm:gap-4">
           {/* Right: Brand Logo */}
           <IraLogo />
 
@@ -119,7 +120,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenModal }) => {
           </nav>
 
           {/* Left: Actions */}
-          <div className="flex items-center gap-2.5">
+          <div className="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
             <button
               onClick={() => onOpenModal('ai-demo')}
               title="دستیار هوش مصنوعی IRA"
@@ -131,17 +132,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenModal }) => {
             <button
               onClick={() => onOpenModal('search')}
               title="جستجو در مستندات و امکانات"
-              className="flex items-center justify-center w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200/80 text-slate-700 border border-slate-200/80 transition-all cursor-pointer"
+              className="hidden min-[420px]:flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-slate-100 hover:bg-slate-200/80 text-slate-700 border border-slate-200/80 transition-all cursor-pointer"
             >
               <Search className="w-4 h-4" />
             </button>
 
             <button
               onClick={() => onOpenModal('signup')}
-              className="inline-flex items-center gap-2 bg-[#0E74D2] hover:bg-[#0B5CAD] text-white text-sm font-bold px-4 py-2.5 rounded-xl shadow-sm shadow-blue-500/20 hover:shadow-md hover:shadow-blue-500/30 transition-all cursor-pointer"
+              className="inline-flex items-center gap-1.5 sm:gap-2 bg-[#0E74D2] hover:bg-[#0B5CAD] text-white text-xs sm:text-sm font-bold px-2 sm:px-4 py-2 sm:py-2.5 rounded-xl shadow-sm shadow-blue-500/20 hover:shadow-md hover:shadow-blue-500/30 transition-all cursor-pointer"
             >
-              <span>ورود / ثبت نام</span>
-              <span className="w-6 h-6 rounded-lg bg-white/20 flex items-center justify-center">
+              <span className="hidden min-[400px]:inline">ورود</span>
+              <span className="hidden sm:inline"> / ثبت نام</span>
+              <span className="w-6 h-6 rounded-lg bg-white/20 flex items-center justify-center shrink-0">
                 <User className="w-3.5 h-3.5" />
               </span>
             </button>
@@ -149,7 +151,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenModal }) => {
             {/* Mobile Hamburger Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden flex items-center justify-center w-10 h-10 rounded-xl bg-slate-100 text-slate-700 border border-slate-200"
+              className="lg:hidden flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-slate-100 text-slate-700 border border-slate-200"
               aria-label="منوی موبایل"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -172,16 +174,26 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenModal }) => {
                 </a>
               ))}
             </div>
-            <div className="pt-2 flex gap-2">
+            <div className="pt-2 grid grid-cols-2 gap-2">
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  onOpenModal('search');
+                }}
+                className="py-2.5 rounded-xl bg-slate-100 text-slate-800 font-bold text-sm flex items-center justify-center gap-2 border border-slate-200"
+              >
+                <Search className="w-4 h-4" />
+                جستجو
+              </button>
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
                   onOpenModal('ai-demo');
                 }}
-                className="w-full py-2.5 rounded-xl bg-amber-500 text-slate-950 font-bold text-sm flex items-center justify-center gap-2"
+                className="py-2.5 rounded-xl bg-amber-500 text-slate-950 font-bold text-sm flex items-center justify-center gap-2"
               >
                 <Sparkles className="w-4 h-4" />
-                تست دستیار هوشمند IRA
+                دستیار IRA
               </button>
             </div>
           </div>
